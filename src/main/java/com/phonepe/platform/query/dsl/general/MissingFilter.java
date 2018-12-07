@@ -4,6 +4,7 @@ package com.phonepe.platform.query.dsl.general;
 import com.phonepe.platform.query.dsl.Filter;
 import com.phonepe.platform.query.dsl.FilterOperator;
 import com.phonepe.platform.query.dsl.FilterVisitor;
+import lombok.Builder;
 import lombok.Data;
 import lombok.EqualsAndHashCode;
 import lombok.ToString;
@@ -22,6 +23,7 @@ public class MissingFilter extends Filter {
         super(FilterOperator.MISSING);
     }
 
+    @Builder
     public MissingFilter(String field) {
         super(FilterOperator.MISSING, field);
     }

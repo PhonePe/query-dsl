@@ -3,6 +3,7 @@ package com.phonepe.platform.query.dsl.general;
 import com.phonepe.platform.query.dsl.Filter;
 import com.phonepe.platform.query.dsl.FilterOperator;
 import com.phonepe.platform.query.dsl.FilterVisitor;
+import lombok.Builder;
 import lombok.Data;
 import lombok.EqualsAndHashCode;
 import lombok.ToString;
@@ -22,6 +23,7 @@ public class ContainsFilter extends Filter {
         super(FilterOperator.CONTAINS);
     }
 
+    @Builder
     public ContainsFilter(String field, String value) {
         super(FilterOperator.CONTAINS, field);
         this.value = value;

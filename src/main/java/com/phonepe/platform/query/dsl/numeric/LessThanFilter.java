@@ -3,6 +3,7 @@ package com.phonepe.platform.query.dsl.numeric;
 
 import com.phonepe.platform.query.dsl.FilterOperator;
 import com.phonepe.platform.query.dsl.FilterVisitor;
+import lombok.Builder;
 import lombok.Data;
 import lombok.EqualsAndHashCode;
 import lombok.ToString;
@@ -20,6 +21,7 @@ public class LessThanFilter extends NumericBinaryFilter {
         super(FilterOperator.LESS_THAN);
     }
 
+    @Builder
     public LessThanFilter(String field, Number value) {
         super(FilterOperator.LESS_THAN, field, value);
     }

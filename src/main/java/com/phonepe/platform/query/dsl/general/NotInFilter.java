@@ -4,6 +4,7 @@ import com.phonepe.platform.query.dsl.Filter;
 import com.phonepe.platform.query.dsl.FilterOperator;
 import com.phonepe.platform.query.dsl.FilterVisitor;
 import java.util.List;
+import lombok.Builder;
 import lombok.Data;
 import lombok.EqualsAndHashCode;
 import lombok.ToString;
@@ -23,6 +24,7 @@ public class NotInFilter extends Filter {
         super(FilterOperator.NOT_IN);
     }
 
+    @Builder
     public NotInFilter(String field, List<Object> values) {
         super(FilterOperator.NOT_IN, field);
         this.values = values;

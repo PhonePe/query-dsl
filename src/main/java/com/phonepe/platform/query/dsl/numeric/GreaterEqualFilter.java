@@ -2,6 +2,7 @@ package com.phonepe.platform.query.dsl.numeric;
 
 import com.phonepe.platform.query.dsl.FilterOperator;
 import com.phonepe.platform.query.dsl.FilterVisitor;
+import lombok.Builder;
 import lombok.Data;
 import lombok.EqualsAndHashCode;
 import lombok.ToString;
@@ -20,6 +21,7 @@ public class GreaterEqualFilter extends NumericBinaryFilter {
         super(FilterOperator.GREATER_EQUAL);
     }
 
+    @Builder
     public GreaterEqualFilter(String field, Number value) {
         super(FilterOperator.GREATER_EQUAL, field, value);
     }

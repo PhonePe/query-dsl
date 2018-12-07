@@ -3,6 +3,7 @@ package com.phonepe.platform.query.dsl.numeric;
 import com.phonepe.platform.query.dsl.Filter;
 import com.phonepe.platform.query.dsl.FilterOperator;
 import com.phonepe.platform.query.dsl.FilterVisitor;
+import lombok.Builder;
 import lombok.Data;
 import lombok.EqualsAndHashCode;
 import lombok.ToString;
@@ -24,6 +25,7 @@ public class BetweenFilter extends Filter {
         super(FilterOperator.BETWEEN);
     }
 
+    @Builder
     public BetweenFilter(String field, Number from, Number to) {
         super(FilterOperator.BETWEEN, field);
         this.from = from;

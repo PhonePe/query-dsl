@@ -3,10 +3,12 @@ package com.phonepe.platform.query.dsl.general;
 import com.phonepe.platform.query.dsl.Filter;
 import com.phonepe.platform.query.dsl.FilterOperator;
 import com.phonepe.platform.query.dsl.FilterVisitor;
-import java.util.List;
+import lombok.Builder;
 import lombok.Data;
 import lombok.EqualsAndHashCode;
 import lombok.ToString;
+
+import java.util.List;
 
 /**
  * @author tushar.naik
@@ -23,6 +25,7 @@ public class InFilter extends Filter {
         super(FilterOperator.IN);
     }
 
+    @Builder
     public InFilter(String field, List<Object> values) {
         super(FilterOperator.IN, field);
         this.values = values;
