@@ -1,4 +1,4 @@
-package com.phonepe.platform.query.dsl.general;
+package com.phonepe.platform.query.dsl.string;
 
 import com.phonepe.platform.query.dsl.Filter;
 import com.phonepe.platform.query.dsl.FilterOperator;
@@ -10,25 +10,22 @@ import lombok.ToString;
 
 /**
  * @author tushar.naik
- * @version 1.0  03/05/17 - 2:43 PM
+ * @version 1.0  23/09/19 - 12:40 PM
  */
 @Data
 @EqualsAndHashCode(callSuper = true)
 @ToString(callSuper = true)
-public class ContainsFilter extends Filter {
-
+public class StringRegexMatchFilter extends Filter {
     private String value;
-    private boolean iterable;
 
-    public ContainsFilter() {
-        super(FilterOperator.CONTAINS);
+    public StringRegexMatchFilter() {
+        super(FilterOperator.STR_REGEX_MATCH);
     }
 
     @Builder
-    public ContainsFilter(String field, String value, Boolean iterable) {
-        super(FilterOperator.CONTAINS, field);
+    public StringRegexMatchFilter(String field, String value) {
+        super(FilterOperator.STR_REGEX_MATCH, field);
         this.value = value;
-        this.iterable = iterable;
     }
 
     @Override

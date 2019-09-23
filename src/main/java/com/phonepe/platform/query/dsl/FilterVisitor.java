@@ -5,6 +5,9 @@ import com.phonepe.platform.query.dsl.general.ContainsFilter;
 import com.phonepe.platform.query.dsl.logical.AndFilter;
 import com.phonepe.platform.query.dsl.logical.OrFilter;
 import com.phonepe.platform.query.dsl.numeric.*;
+import com.phonepe.platform.query.dsl.string.StringEndsWithFilter;
+import com.phonepe.platform.query.dsl.string.StringRegexMatchFilter;
+import com.phonepe.platform.query.dsl.string.StringStartsWithFilter;
 
 /**
  * A visitor on various types of {@link Filter}s
@@ -43,4 +46,10 @@ public interface FilterVisitor<T> {
     T visit(AndFilter andFilter);
 
     T visit(OrFilter orFilter);
+
+    T visit(StringStartsWithFilter stringStartsWithFilter);
+
+    T visit(StringEndsWithFilter stringEndsWithFilter);
+
+    T visit(StringRegexMatchFilter stringRegexMatchFilter);
 }
