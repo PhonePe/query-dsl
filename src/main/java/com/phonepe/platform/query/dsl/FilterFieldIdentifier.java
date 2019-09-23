@@ -4,6 +4,10 @@ import com.phonepe.platform.query.dsl.general.*;
 import com.phonepe.platform.query.dsl.logical.AndFilter;
 import com.phonepe.platform.query.dsl.logical.OrFilter;
 import com.phonepe.platform.query.dsl.numeric.*;
+import com.phonepe.platform.query.dsl.string.StringEndsWithFilter;
+import com.phonepe.platform.query.dsl.string.StringRegexMatchFilter;
+import com.phonepe.platform.query.dsl.string.StringStartsWithFilter;
+
 import java.util.stream.Stream;
 
 /**
@@ -92,5 +96,20 @@ public class FilterFieldIdentifier implements FilterVisitor<Stream<String>> {
                        .map(k -> k.accept(this))
                        .reduce(Stream::concat)
                        .orElse(Stream.empty());
+    }
+
+    @Override
+    public Stream<String> visit(StringStartsWithFilter stringStartsWithFilter) {
+        return Stream.of(stringStartsWithFilter.getField());
+    }
+
+    @Override
+    public Stream<String> visit(StringEndsWithFilter stringEndsWithFilter) {
+        return Stream.of(stringEndsWithFilter.getField());
+    }
+
+    @Override
+    public Stream<String> visit(StringRegexMatchFilter stringRegexMatchFilter) {
+        return Stream.of(stringRegexMatchFilter.getField());
     }
 }

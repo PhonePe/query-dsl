@@ -23,6 +23,11 @@ public class FilterOperator {
     public static final String MISSING = "MISSING";
     public static final String CONTAINS = "CONTAINS";
 
+    /* string */
+    public static final String STR_ENDS_WITH = "STRING_ENDS_WITH";
+    public static final String STR_STARTS_WITH = "STRING_STARTS_WITH";
+    public static final String STR_REGEX_MATCH = "STRING_REGEX_MATCH";
+
     /* logical filters */
     public static final String AND = "AND";
     public static final String OR = "OR";

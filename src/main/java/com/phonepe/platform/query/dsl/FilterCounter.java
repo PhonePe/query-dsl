@@ -4,6 +4,9 @@ import com.phonepe.platform.query.dsl.general.*;
 import com.phonepe.platform.query.dsl.logical.AndFilter;
 import com.phonepe.platform.query.dsl.logical.OrFilter;
 import com.phonepe.platform.query.dsl.numeric.*;
+import com.phonepe.platform.query.dsl.string.StringEndsWithFilter;
+import com.phonepe.platform.query.dsl.string.StringRegexMatchFilter;
+import com.phonepe.platform.query.dsl.string.StringStartsWithFilter;
 
 /**
  * @author tushar.naik
@@ -90,5 +93,20 @@ public class FilterCounter implements FilterVisitor<Integer> {
                        .stream()
                        .mapToInt(k -> k.accept(this))
                        .sum();
+    }
+
+    @Override
+    public Integer visit(StringStartsWithFilter stringStartsWithFilter) {
+        return 1;
+    }
+
+    @Override
+    public Integer visit(StringEndsWithFilter stringEndsWithFilter) {
+        return 1;
+    }
+
+    @Override
+    public Integer visit(StringRegexMatchFilter stringRegexMatchFilter) {
+        return 1;
     }
 }
