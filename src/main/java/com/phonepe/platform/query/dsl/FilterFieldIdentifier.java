@@ -101,7 +101,7 @@ public class FilterFieldIdentifier implements FilterVisitor<Stream<String>> {
 
     @Override
     public Stream<String> visit(NotFilter notFilter) {
-        return notFilter.accept(this);
+        return notFilter.getFilter().accept(this);
     }
 
     @Override

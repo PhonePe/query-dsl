@@ -98,7 +98,7 @@ public class FilterCounter implements FilterVisitor<Integer> {
 
     @Override
     public Integer visit(NotFilter notFilter) {
-        return notFilter.accept(this);
+        return notFilter.getFilter().accept(this);
     }
 
     @Override
