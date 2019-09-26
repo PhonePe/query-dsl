@@ -1,8 +1,8 @@
 package com.phonepe.platform.query.dsl;
 
 import com.phonepe.platform.query.dsl.general.*;
-import com.phonepe.platform.query.dsl.general.ContainsFilter;
 import com.phonepe.platform.query.dsl.logical.AndFilter;
+import com.phonepe.platform.query.dsl.logical.NotFilter;
 import com.phonepe.platform.query.dsl.logical.OrFilter;
 import com.phonepe.platform.query.dsl.numeric.*;
 import com.phonepe.platform.query.dsl.string.StringEndsWithFilter;
@@ -46,6 +46,8 @@ public interface FilterVisitor<T> {
     T visit(AndFilter andFilter);
 
     T visit(OrFilter orFilter);
+
+    T visit(NotFilter notFilter);
 
     T visit(StringStartsWithFilter stringStartsWithFilter);
 

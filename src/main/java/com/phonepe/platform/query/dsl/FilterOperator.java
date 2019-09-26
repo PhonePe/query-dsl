@@ -30,5 +30,6 @@ public class FilterOperator {
 
     /* logical filters */
     public static final String AND = "AND";
+    public static final String NOT = "NOT";
     public static final String OR = "OR";
 }
