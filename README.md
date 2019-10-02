@@ -14,6 +14,6 @@ Use this to describe a fully structured boolean query
         <dependency>
           <groupId>com.phonepe.platform</groupId>
           <artifactId>query-dsl</artifactId>
-          <version>1.0-SNAPSHOT</version>
+          <version>1.2</version>
         </dependency>
 ```

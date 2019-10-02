@@ -6,10 +6,10 @@
 
   <groupId>com.phonepe.platform</groupId>
   <artifactId>query-dsl</artifactId>
-  <version>1.1</version>
+  <version>1.2</version>
   <properties>
     <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-    <lombok.version>1.18.4</lombok.version>
+    <lombok.version>1.18.8</lombok.version>
     <junit.version>4.12</junit.version>
     <jackson.version>2.9.6</jackson.version>
     <mockito.version>2.7.6</mockito.version>
@@ -27,7 +27,7 @@
       <dependency>
         <groupId>com.google.guava</groupId>
         <artifactId>guava</artifactId>
-        <version>26.0-jre</version>
+        <version>28.1-jre</version>
       </dependency>
       <dependency>
         <groupId>com.fasterxml.jackson.core</groupId>
@@ -53,7 +53,7 @@
       <dependency>
         <groupId>junit</groupId>
         <artifactId>junit</artifactId>
-        <version>4.12</version>
+        <version>${junit.version}</version>
         <scope>test</scope>
       </dependency>
     </dependencies>
@@ -227,7 +227,7 @@
         <plugin>
           <groupId>org.codehaus.mojo</groupId>
           <artifactId>findbugs-maven-plugin</artifactId>
-          <version>3.0.3</version>
+          <version>3.0.5</version>
         </plugin>
         <!-- Source code metrics: mvn javancss:report or mvn site -->
         <plugin>

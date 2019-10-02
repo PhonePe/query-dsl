@@ -1,36 +1,40 @@
-package com.phonepe.platform.query.dsl.general;
+package com.phonepe.platform.query.dsl.logical;
 
 import com.phonepe.platform.query.dsl.Filter;
 import com.phonepe.platform.query.dsl.FilterOperator;
 import com.phonepe.platform.query.dsl.FilterVisitor;
 import lombok.Builder;
-import lombok.Data;
 import lombok.EqualsAndHashCode;
+import lombok.Getter;
 import lombok.ToString;
 
 /**
  * @author tushar.naik
- * @version 1.0  03/05/17 - 2:47 PM
+ * @version 1.0  26/09/19 - 11:29 PM
  */
-@Data
 @EqualsAndHashCode(callSuper = true)
 @ToString(callSuper = true)
-public class NotEqualsFilter extends Filter {
+public class NotFilter extends Filter {
+    @Getter
+    private Filter filter;
 
-    private Object value;
-
-    public NotEqualsFilter() {
-        super(FilterOperator.NOT_EQUALS);
+    public NotFilter() {
+        super(FilterOperator.NOT);
     }
 
     @Builder
-    public NotEqualsFilter(String field, Object value) {
-        super(FilterOperator.NOT_EQUALS, field);
-        this.value = value;
+    public NotFilter(Filter filter) {
+        super(FilterOperator.NOT);
+        this.filter = filter;
     }
 
     @Override
     public <V> V accept(FilterVisitor<V> visitor) {
         return visitor.visit(this);
+    }
+
+    @Override
+    public boolean validate() {
+        return filter.validate();
     }
 }

@@ -2,6 +2,7 @@ package com.phonepe.platform.query.dsl;
 
 import com.phonepe.platform.query.dsl.general.*;
 import com.phonepe.platform.query.dsl.logical.AndFilter;
+import com.phonepe.platform.query.dsl.logical.NotFilter;
 import com.phonepe.platform.query.dsl.logical.OrFilter;
 import com.phonepe.platform.query.dsl.numeric.*;
 import com.phonepe.platform.query.dsl.string.StringEndsWithFilter;
@@ -89,6 +90,11 @@ public class AbstractFilterVisitor<T> implements FilterVisitor<T>{
 
     @Override
     public T visit(OrFilter orFilter) {
+        return data;
+    }
+
+    @Override
+    public T visit(NotFilter notFilter) {
         return data;
     }
 

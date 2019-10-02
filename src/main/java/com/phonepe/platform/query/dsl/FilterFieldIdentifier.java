@@ -2,6 +2,7 @@ package com.phonepe.platform.query.dsl;
 
 import com.phonepe.platform.query.dsl.general.*;
 import com.phonepe.platform.query.dsl.logical.AndFilter;
+import com.phonepe.platform.query.dsl.logical.NotFilter;
 import com.phonepe.platform.query.dsl.logical.OrFilter;
 import com.phonepe.platform.query.dsl.numeric.*;
 import com.phonepe.platform.query.dsl.string.StringEndsWithFilter;
@@ -96,6 +97,11 @@ public class FilterFieldIdentifier implements FilterVisitor<Stream<String>> {
                        .map(k -> k.accept(this))
                        .reduce(Stream::concat)
                        .orElse(Stream.empty());
+    }
+
+    @Override
+    public Stream<String> visit(NotFilter notFilter) {
+        return notFilter.getFilter().accept(this);
     }
 
     @Override

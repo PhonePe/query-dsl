@@ -4,6 +4,7 @@ import com.fasterxml.jackson.annotation.JsonSubTypes;
 import com.fasterxml.jackson.annotation.JsonTypeInfo;
 import com.phonepe.platform.query.dsl.general.*;
 import com.phonepe.platform.query.dsl.logical.AndFilter;
+import com.phonepe.platform.query.dsl.logical.NotFilter;
 import com.phonepe.platform.query.dsl.logical.OrFilter;
 import com.phonepe.platform.query.dsl.numeric.*;
 import com.phonepe.platform.query.dsl.string.StringEndsWithFilter;
@@ -33,6 +34,7 @@ import lombok.SneakyThrows;
         @JsonSubTypes.Type(value = ContainsFilter.class, name = FilterOperator.CONTAINS),
         @JsonSubTypes.Type(value = AndFilter.class, name = FilterOperator.AND),
         @JsonSubTypes.Type(value = OrFilter.class, name = FilterOperator.OR),
+        @JsonSubTypes.Type(value = NotFilter.class, name = FilterOperator.NOT),
         @JsonSubTypes.Type(value = StringEndsWithFilter.class, name = FilterOperator.STR_ENDS_WITH),
         @JsonSubTypes.Type(value = StringStartsWithFilter.class, name = FilterOperator.STR_STARTS_WITH),
         @JsonSubTypes.Type(value = StringRegexMatchFilter.class, name = FilterOperator.STR_REGEX_MATCH)

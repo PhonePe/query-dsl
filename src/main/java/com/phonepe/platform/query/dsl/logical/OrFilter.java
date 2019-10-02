@@ -3,8 +3,9 @@ package com.phonepe.platform.query.dsl.logical;
 import com.phonepe.platform.query.dsl.Filter;
 import com.phonepe.platform.query.dsl.FilterOperator;
 import com.phonepe.platform.query.dsl.FilterVisitor;
-import java.util.List;
 import lombok.*;
+
+import java.util.List;
 
 /**
  * @author tushar.naik
@@ -16,7 +17,7 @@ public class OrFilter extends Filter {
 
     @Singular
     @Getter
-    List<Filter> filters;
+    private List<Filter> filters;
 
     protected OrFilter() {
         super(FilterOperator.OR);

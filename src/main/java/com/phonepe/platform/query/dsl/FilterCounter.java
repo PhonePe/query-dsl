@@ -2,6 +2,7 @@ package com.phonepe.platform.query.dsl;
 
 import com.phonepe.platform.query.dsl.general.*;
 import com.phonepe.platform.query.dsl.logical.AndFilter;
+import com.phonepe.platform.query.dsl.logical.NotFilter;
 import com.phonepe.platform.query.dsl.logical.OrFilter;
 import com.phonepe.platform.query.dsl.numeric.*;
 import com.phonepe.platform.query.dsl.string.StringEndsWithFilter;
@@ -93,6 +94,11 @@ public class FilterCounter implements FilterVisitor<Integer> {
                        .stream()
                        .mapToInt(k -> k.accept(this))
                        .sum();
+    }
+
+    @Override
+    public Integer visit(NotFilter notFilter) {
+        return notFilter.getFilter().accept(this);
     }
 
     @Override
