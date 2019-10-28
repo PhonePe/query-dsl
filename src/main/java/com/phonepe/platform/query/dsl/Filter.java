@@ -37,8 +37,7 @@ import lombok.SneakyThrows;
         @JsonSubTypes.Type(value = NotFilter.class, name = FilterOperator.NOT),
         @JsonSubTypes.Type(value = StringEndsWithFilter.class, name = FilterOperator.STR_ENDS_WITH),
         @JsonSubTypes.Type(value = StringStartsWithFilter.class, name = FilterOperator.STR_STARTS_WITH),
-        @JsonSubTypes.Type(value = StringRegexMatchFilter.class, name = FilterOperator.STR_REGEX_MATCH),
-        @JsonSubTypes.Type(value = GenericFilter.class, name = FilterOperator.GENERIC)
+        @JsonSubTypes.Type(value = StringRegexMatchFilter.class, name = FilterOperator.STR_REGEX_MATCH)
 })
 @Data
 public abstract class Filter {

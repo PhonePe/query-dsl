@@ -115,9 +115,4 @@ public class FilterCounter implements FilterVisitor<Integer> {
     public Integer visit(StringRegexMatchFilter stringRegexMatchFilter) {
         return 1;
     }
-
-    @Override
-    public Integer visit(GenericFilter genericFilter) {
-        return 1;
-    }
 }

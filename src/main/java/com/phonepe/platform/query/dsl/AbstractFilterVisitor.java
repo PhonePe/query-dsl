@@ -112,9 +112,4 @@ public class AbstractFilterVisitor<T> implements FilterVisitor<T>{
     public T visit(StringRegexMatchFilter stringRegexMatchFilter) {
         return data;
     }
-
-    @Override
-    public T visit(GenericFilter genericFilter){
-        return data;
-    }
 }
