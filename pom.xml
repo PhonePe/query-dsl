@@ -12,7 +12,7 @@
     <lombok.version>1.18.8</lombok.version>
     <junit.version>4.12</junit.version>
     <jackson.version>2.9.6</jackson.version>
-    <mockito.version>2.7.6</mockito.version>
+    <mockito.version>2.7.9</mockito.version>
     <sonar.sources>src/main</sonar.sources>
     <sonar.tests>src/test</sonar.tests>
     <sonar.java.coveragePlugin>jacoco</sonar.java.coveragePlugin>
@@ -63,6 +63,10 @@
     <dependency>
       <groupId>org.projectlombok</groupId>
       <artifactId>lombok</artifactId>
+    </dependency>
+    <dependency>
+      <groupId>com.fasterxml.jackson.core</groupId>
+      <artifactId>jackson-databind</artifactId>
     </dependency>
     <dependency>
       <groupId>com.fasterxml.jackson.core</groupId>
