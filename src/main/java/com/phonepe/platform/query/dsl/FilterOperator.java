@@ -22,6 +22,7 @@ public class FilterOperator {
     public static final String EXISTS = "EXISTS";
     public static final String MISSING = "MISSING";
     public static final String CONTAINS = "CONTAINS";
+    public static final String GENERIC = "GENERIC";
 
     /* string */
     public static final String STR_ENDS_WITH = "STRING_ENDS_WITH";
