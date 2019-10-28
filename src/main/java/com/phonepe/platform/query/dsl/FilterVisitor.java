@@ -54,4 +54,6 @@ public interface FilterVisitor<T> {
     T visit(StringEndsWithFilter stringEndsWithFilter);
 
     T visit(StringRegexMatchFilter stringRegexMatchFilter);
+
+    T visit(GenericFilter genericFilter);
 }

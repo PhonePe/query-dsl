@@ -118,4 +118,10 @@ public class FilterFieldIdentifier implements FilterVisitor<Stream<String>> {
     public Stream<String> visit(StringRegexMatchFilter stringRegexMatchFilter) {
         return Stream.of(stringRegexMatchFilter.getField());
     }
+
+    @Override
+    public Stream<String> visit(GenericFilter genericFilter) {
+        return Stream.of(genericFilter.getField());
+    }
+
 }
