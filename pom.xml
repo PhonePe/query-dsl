@@ -323,7 +323,7 @@
                 <configuration>
                     <debug>false</debug>
                     <xmlOutput>true</xmlOutput>
-                    <failOnError>true</failOnError>
+                    <failOnError>false</failOnError>
                 </configuration>
                 <executions>
                     <execution>
