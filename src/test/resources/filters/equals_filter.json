@@ -1,0 +1,5 @@
+{
+  "operator": "EQUALS",
+  "field": "name",
+  "value": "John Doe"
+}

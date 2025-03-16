@@ -1,0 +1,8 @@
+{
+  "operator": "NOT",
+  "filter": {
+    "operator": "EQUALS",
+    "field": "status",
+    "value": "inactive"
+  }
+}

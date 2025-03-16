@@ -1,0 +1,6 @@
+{
+  "operator": "STRING_STARTS_WITH",
+  "field": "name",
+  "value": "John",
+  "offset": 0
+}

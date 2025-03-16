@@ -1,0 +1,5 @@
+{
+  "operator": "NOT_IN",
+  "field": "status",
+  "values": ["deleted", "archived", "inactive"]
+}

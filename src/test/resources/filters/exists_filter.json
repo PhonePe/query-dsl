@@ -1,0 +1,4 @@
+{
+  "operator": "EXISTS",
+  "field": "email"
+}

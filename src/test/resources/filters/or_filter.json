@@ -1,0 +1,16 @@
+
+{
+  "operator": "OR",
+  "filters": [
+    {
+      "operator": "EQUALS",
+      "field": "category",
+      "value": "premium"
+    },
+    {
+      "operator": "GREATER_EQUAL",
+      "field": "purchaseAmount",
+      "value": 1000
+    }
+  ]
+}

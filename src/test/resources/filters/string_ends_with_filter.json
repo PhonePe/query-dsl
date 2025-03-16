@@ -1,0 +1,5 @@
+{
+  "operator": "STRING_ENDS_WITH",
+  "field": "email",
+  "value": "@example.com"
+}

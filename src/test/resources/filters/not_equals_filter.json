@@ -1,0 +1,5 @@
+{
+  "operator": "NOT_EQUALS",
+  "field": "status",
+  "value": "inactive"
+}

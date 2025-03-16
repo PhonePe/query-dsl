@@ -1,0 +1,5 @@
+{
+  "operator": "LESS_EQUAL",
+  "field": "quantity",
+  "value": 10
+}

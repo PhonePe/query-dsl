@@ -1,0 +1,4 @@
+{
+  "operator": "ANY",
+  "field": "status"
+}

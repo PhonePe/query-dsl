@@ -1,0 +1,6 @@
+{
+  "operator": "CONTAINS",
+  "field": "tags",
+  "value": "premium",
+  "iterable": true
+}

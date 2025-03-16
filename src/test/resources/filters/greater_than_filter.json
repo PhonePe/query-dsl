@@ -1,0 +1,5 @@
+{
+  "operator": "GREATER_THAN",
+  "field": "age",
+  "value": 18
+}

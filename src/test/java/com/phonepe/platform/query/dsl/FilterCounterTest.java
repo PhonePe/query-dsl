@@ -29,13 +29,13 @@ public class FilterCounterTest {
 
     @Test
     public void testFilterCounter() {
-        AndFilter build = AndFilter.builder().filter(EqualsFilter.builder().build())
-                                   .filter(InFilter.builder().build())
-                                   .filter(new AnyFilter())
-                                   .filter(OrFilter.builder().filter(new AnyFilter())
-                                                   .filter(EqualsFilter.builder().build())
-                                                   .build())
-                                   .build();
+        final var build = AndFilter.builder().filter(EqualsFilter.builder().build())
+                .filter(InFilter.builder().build())
+                .filter(new AnyFilter())
+                .filter(OrFilter.builder().filter(new AnyFilter())
+                                .filter(EqualsFilter.builder().build())
+                                .build())
+                .build();
         assertEquals(5, build.accept(new FilterCounter()).intValue());
     }
 }

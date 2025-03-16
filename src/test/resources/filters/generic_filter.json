@@ -1,0 +1,10 @@
+{
+  "operator": "GENERIC",
+  "field": "customField",
+  "value": {
+    "customKey": "customValue",
+    "nestedObject": {
+      "nestedKey": "nestedValue"
+    }
+  }
+}

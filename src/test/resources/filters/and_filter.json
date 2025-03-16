@@ -1,0 +1,15 @@
+{
+  "operator": "AND",
+  "filters": [
+    {
+      "operator": "EQUALS",
+      "field": "status",
+      "value": "active"
+    },
+    {
+      "operator": "GREATER_THAN",
+      "field": "age",
+      "value": 18
+    }
+  ]
+}

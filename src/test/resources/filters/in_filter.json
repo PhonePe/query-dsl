@@ -1,0 +1,5 @@
+{
+  "operator": "IN",
+  "field": "category",
+  "values": ["electronics", "gadgets", "accessories"]
+}

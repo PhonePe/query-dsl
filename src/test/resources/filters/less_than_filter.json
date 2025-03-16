@@ -1,0 +1,5 @@
+{
+  "operator": "LESS_THAN",
+  "field": "price",
+  "value": 100
+}
