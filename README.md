@@ -1,13 +1,12 @@
 # Query DSL
 
-A flexible and extensible query domain-specific language (DSL) for building complex filter expressions in Java
-applications.
+A light and extensible Query domain-specific language (DSL) for representing filter expressions in Java applications.
 
 ## Overview
 
-Query DSL provides a powerful way to build and represent filter expressions for querying data. It supports a wide range
-of filter types, from simple equality checks to complex logical combinations, making it suitable for various use cases
-such as database queries, search functionality, and data filtering.
+Query DSL provides a simple way to build and represent filter expressions for querying application data. It supports a
+wide range of filter types, from simple equality checks to complex logical combinations, making it suitable for various
+use cases such as database queries, search functionality, and data filtering.
 
 ## Motivation
 
@@ -24,6 +23,28 @@ a way to represent these queries in a structured and type-safe manner.
 - **Visitor Pattern**: Extensible architecture using the visitor pattern for custom filter processing
 - **JSON Serialization**: Built-in support for JSON serialization/deserialization using Jackson
 - **Validation**: Filter validation to ensure correctness
+
+## Getting Started
+
+### Prerequisites
+
+- Java 17 or higher
+- Maven
+
+### Installation
+
+Add the dependency to your project:
+
+#### Maven
+
+```xml
+
+<dependency>
+    <groupId>com.phonepe.commons</groupId>
+    <artifactId>query-dsl</artifactId>
+    <version>1.4</version>
+</dependency>
+```
 
 ## Filter Types
 
@@ -91,6 +112,28 @@ AndFilter combinedFilter = AndFilter.builder()
         .build();
 ```
 
+Your main implementation of the filter logic in your application (where you might query some underlying data-store)
+would have to implement the `FilterVisitor` interface and provide the logic for each filter type.
+
+```java
+public class DBQueryVisitor implements FilterVisitor<DBQuery> {
+    @Override
+    public DBQuery visit(EqualsFilter equalsFilter) {
+        // Implement the logic for the equals filter
+        return new DBQuery..;
+    }
+
+    @Override
+    public DBQuery visit(GreaterThanFilter greaterThanFilter) {
+        // Implement the logic for the greater than filter
+        return new DBQuery..;
+    }
+
+    // Implement other visit methods...
+}
+
+```
+
 ### Serializing to JSON
 
 ```java
@@ -127,28 +170,6 @@ FilterVisitor<Boolean> evaluationVisitor = new AbstractFilterVisitor<Boolean>(fa
 
 // Apply the visitor to a filter
 boolean result = filter.accept(evaluationVisitor);
-```
-
-## Getting Started
-
-### Prerequisites
-
-- Java 17 or higher
-- Maven or Gradle
-
-### Installation
-
-Add the dependency to your project:
-
-#### Maven
-
-```xml
-
-<dependency>
-    <groupId>com.phonepe.platform</groupId>
-    <artifactId>query-dsl</artifactId>
-    <version>1.4</version>
-</dependency>
 ```
 
 ## Testing

@@ -4,9 +4,12 @@
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <modelVersion>4.0.0</modelVersion>
 
-    <groupId>com.phonepe.platform</groupId>
+    <groupId>com.phonepe.commons</groupId>
     <artifactId>query-dsl</artifactId>
     <version>1.4</version>
+
+
+
     <properties>
         <!--intellij module setting-->
         <maven.compiler.source>17</maven.compiler.source>
@@ -16,19 +19,24 @@
         <maven.javadoc.skip>true</maven.javadoc.skip>
         <maven.plugin.surefire.version>3.3.1</maven.plugin.surefire.version>
         <maven.plugin.enforcer.version>3.0.0-M2</maven.plugin.enforcer.version>
+        <maven.plugin.jacoco.version>0.8.7</maven.plugin.jacoco.version>
 
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <lombok.version>1.18.30</lombok.version>
         <jackson.version>2.13.4</jackson.version>
 
+
+        <sonar.projectKey>PhonePe_query_dsl</sonar.projectKey>
+        <sonar.organization>phonepe</sonar.organization>
+        <sonar.host.url>https://sonarcloud.io</sonar.host.url>
         <sonar.sources>src/main</sonar.sources>
         <sonar.tests>src/test</sonar.tests>
         <sonar.java.coveragePlugin>jacoco</sonar.java.coveragePlugin>
         <sonar.dynamicAnalysis>reuseReports</sonar.dynamicAnalysis>
-        <sonar.jacoco.reportPaths>${project.basedir}/target/jacoco.exec</sonar.jacoco.reportPaths>
         <sonar.language>java</sonar.language>
-        <jacoco.version>0.7.9</jacoco.version>
-
+        <sonar.qualitygate.wait>true</sonar.qualitygate.wait>
+        <sonar.exclusions>
+        </sonar.exclusions>
 
         <junit.jupiter.version>5.8.2</junit.jupiter.version>
         <junit.mockito.version>4.11.0</junit.mockito.version>
@@ -220,7 +228,7 @@
             <plugin>
                 <groupId>org.jacoco</groupId>
                 <artifactId>jacoco-maven-plugin</artifactId>
-                <version>${jacoco.version}</version>
+                <version>${maven.plugin.jacoco.version}</version>
                 <executions>
                     <execution>
                         <id>prepare-agent</id>
