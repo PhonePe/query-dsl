@@ -1,6 +1,31 @@
-# Query DSL
-
-A light and extensible Query domain-specific language (DSL) for representing filter expressions in Java applications.
+<p align="center">
+  <h1 align="center">Query DSL</h1>
+  <p align="center">A java DSL to represent filter expressions<p>
+  <p align="center">
+    <a href="https://github.com/PhonePe/query-dsl/actions">
+    	<img src="https://github.com/PhonePe/query-dsl/actions/workflows/actions.yml/badge.svg"/>
+    </a>
+    <a href="https://s01.oss.sonatype.org/content/repositories/releases/com/phonepe/query-dsl/">
+    	<img src="https://img.shields.io/maven-central/v/com.phonepe.commons/query-dsl"/>
+    </a>
+    <a href="https://github.com/PhonePe/query-dsl/blob/master/LICENSE">
+    	<img src="https://img.shields.io/github/license/PhonePe/query-dsl" alt="license" />
+    </a></p>
+  <p align="center">
+    <a href="https://sonarcloud.io/project/overview?id=PhonePe_query_dsl">
+    	<img src="https://sonarcloud.io/api/project_badges/measure?project=PhonePe_query_dsl&metric=alert_status"/>
+    </a>
+    <a href="https://sonarcloud.io/project/overview?id=PhonePe_query_dsl">
+    	<img src="https://sonarcloud.io/api/project_badges/measure?project=PhonePe_query_dsl&metric=coverage"/>
+    </a>
+    <a href="https://sonarcloud.io/project/overview?id=PhonePe_query_dsl">
+    	<img src="https://sonarcloud.io/api/project_badges/measure?project=PhonePe_query_dsl&metric=bugs"/>
+    </a>
+    <a href="https://sonarcloud.io/project/overview?id=PhonePe_query_dsl">
+    	<img src="https://sonarcloud.io/api/project_badges/measure?project=PhonePe_query_dsl&metric=vulnerabilities"/>
+    </a>
+  </p>
+</p>
 
 ## Overview
 
