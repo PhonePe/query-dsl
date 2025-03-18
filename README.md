@@ -3,14 +3,19 @@
   <p align="center">A java DSL to represent filter expressions<p>
   <p align="center">
     <a href="https://github.com/PhonePe/query-dsl/actions">
-    	<img src="https://github.com/PhonePe/query-dsl/actions/workflows/actions.yml/badge.svg"/>
+    	<img src="https://github.com/PhonePe/query-dsl/actions/workflows/build.yml/badge.svg"/>
     </a>
-    <a href="https://s01.oss.sonatype.org/content/repositories/releases/com/phonepe/query-dsl/">
+    <a href="https://s01.oss.sonatype.org/content/repositories/releases/com/phonepe/commons/query-dsl/">
     	<img src="https://img.shields.io/maven-central/v/com.phonepe.commons/query-dsl"/>
     </a>
     <a href="https://github.com/PhonePe/query-dsl/blob/master/LICENSE">
     	<img src="https://img.shields.io/github/license/PhonePe/query-dsl" alt="license" />
-    </a></p>
+    </a>
+    <a href="https://javadoc.io/doc/com.phonepe.commons/query-dsl">
+    	<img src="https://javadoc.io/badge2/com.phonepe.commons/query-dsl/javadoc.svg" alt="javadoc" />
+    </a>
+  </p>
+
   <p align="center">
     <a href="https://sonarcloud.io/project/overview?id=PhonePe_query-dsl">
     	<img src="https://sonarcloud.io/api/project_badges/measure?project=PhonePe_query-dsl&metric=alert_status"/>
