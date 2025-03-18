@@ -106,7 +106,6 @@
         <sonar.language>java</sonar.language>
         <sonar.qualitygate.wait>true</sonar.qualitygate.wait>
         <sonar.exclusions>
-            **/src/main/java/com/phonepe/commons/query/dsl/FilterFieldIdentifier.java
         </sonar.exclusions>
 
     </properties>
