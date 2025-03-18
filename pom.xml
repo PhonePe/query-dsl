@@ -6,7 +6,7 @@
 
     <groupId>com.phonepe.commons</groupId>
     <artifactId>query-dsl</artifactId>
-    <version>1.5.2</version>
+    <version>1.5.3</version>
 
     <url>https://github.com/PhonePe/query-dsl</url>
     <description>Query DSL</description>
@@ -63,6 +63,14 @@
             </releases>
         </repository>
     </repositories>
+
+    <distributionManagement>
+        <repository>
+            <id>github</id>
+            <name>GitHub Packages</name>
+            <url>https://maven.pkg.github.com/phonepe/query-dsl</url>
+        </repository>
+    </distributionManagement>
 
     <properties>
         <!--intellij module setting-->
