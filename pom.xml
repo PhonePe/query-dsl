@@ -86,7 +86,7 @@
         <jackson.version>2.13.4</jackson.version>
 
 
-        <sonar.projectKey>PhonePe_query_dsl</sonar.projectKey>
+        <sonar.projectKey>PhonePe_query-dsl</sonar.projectKey>
         <sonar.organization>phonepe</sonar.organization>
         <sonar.host.url>https://sonarcloud.io</sonar.host.url>
         <sonar.sources>src/main</sonar.sources>

@@ -12,17 +12,17 @@
     	<img src="https://img.shields.io/github/license/PhonePe/query-dsl" alt="license" />
     </a></p>
   <p align="center">
-    <a href="https://sonarcloud.io/project/overview?id=PhonePe_query_dsl">
-    	<img src="https://sonarcloud.io/api/project_badges/measure?project=PhonePe_query_dsl&metric=alert_status"/>
+    <a href="https://sonarcloud.io/project/overview?id=PhonePe_query-dsl">
+    	<img src="https://sonarcloud.io/api/project_badges/measure?project=PhonePe_query-dsl&metric=alert_status"/>
     </a>
-    <a href="https://sonarcloud.io/project/overview?id=PhonePe_query_dsl">
-    	<img src="https://sonarcloud.io/api/project_badges/measure?project=PhonePe_query_dsl&metric=coverage"/>
+    <a href="https://sonarcloud.io/project/overview?id=PhonePe_query-dsl">
+    	<img src="https://sonarcloud.io/api/project_badges/measure?project=PhonePe_query-dsl&metric=coverage"/>
     </a>
-    <a href="https://sonarcloud.io/project/overview?id=PhonePe_query_dsl">
-    	<img src="https://sonarcloud.io/api/project_badges/measure?project=PhonePe_query_dsl&metric=bugs"/>
+    <a href="https://sonarcloud.io/project/overview?id=PhonePe_query-dsl">
+    	<img src="https://sonarcloud.io/api/project_badges/measure?project=PhonePe_query-dsl&metric=bugs"/>
     </a>
-    <a href="https://sonarcloud.io/project/overview?id=PhonePe_query_dsl">
-    	<img src="https://sonarcloud.io/api/project_badges/measure?project=PhonePe_query_dsl&metric=vulnerabilities"/>
+    <a href="https://sonarcloud.io/project/overview?id=PhonePe_query-dsl">
+    	<img src="https://sonarcloud.io/api/project_badges/measure?project=PhonePe_query-dsl&metric=vulnerabilities"/>
     </a>
   </p>
 </p>
