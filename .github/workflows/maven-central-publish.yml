@@ -27,6 +27,7 @@ jobs:
           MAVEN_PASSWORD: ${{ secrets.MAVEN_CENTRAL_TOKEN_PASSWORD }}
           MAVEN_GPG_PASSPHRASE: ${{ secrets.CENTRAL_GPG_KEY_PASSWORD }}
       - name: Deploy to github packages
-        run: mvn -B deploy -DskipTests
+        run: mvn -B deploy -DskipTests -s ${{ github.workspace }}/.github/workflows/settings.xml
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          GITHUB_ACTOR: ${{ github.actor }}
