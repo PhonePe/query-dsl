@@ -264,11 +264,7 @@
                 </executions>
                 <configuration>
                     <excludes>
-                        <exclude>**/model/**</exclude>
-                        <exclude>**/models/**</exclude>
-                        <exclude>**/*Log*Stream.class</exclude>
-                        <exclude>com/phonepe/drove/controller/*.class</exclude>
-                        <exclude>com/phonepe/drove/controller/ui/*.class</exclude>
+                        <exclude>com/phonepe/commons/query/dsl/FilterFieldIdentifier.java</exclude>
                     </excludes>
                 </configuration>
             </plugin>

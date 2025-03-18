@@ -37,71 +37,10 @@ import com.phonepe.commons.query.dsl.string.StringEndsWithFilter;
 import com.phonepe.commons.query.dsl.string.StringRegexMatchFilter;
 import com.phonepe.commons.query.dsl.string.StringStartsWithFilter;
 
-public class FilterCounter implements FilterVisitor<Integer> {
+public class FilterCounter extends AbstractFilterVisitor<Integer> {
 
-    @Override
-    public Integer visit(ContainsFilter filter) {
-        return 1;
-    }
-
-    @Override
-    public Integer visit(LessThanFilter filter) {
-        return 1;
-    }
-
-    @Override
-    public Integer visit(LessEqualFilter filter) {
-        return 1;
-    }
-
-    @Override
-    public Integer visit(GreaterThanFilter filter) {
-        return 1;
-    }
-
-    @Override
-    public Integer visit(BetweenFilter filter) {
-        return 1;
-    }
-
-    @Override
-    public Integer visit(GreaterEqualFilter filter) {
-        return 1;
-    }
-
-    @Override
-    public Integer visit(NotInFilter filter) {
-        return 1;
-    }
-
-    @Override
-    public Integer visit(NotEqualsFilter filter) {
-        return 1;
-    }
-
-    @Override
-    public Integer visit(MissingFilter filter) {
-        return 1;
-    }
-
-    @Override
-    public Integer visit(InFilter filter) {
-        return 1;
-    }
-
-    @Override
-    public Integer visit(ExistsFilter filter) {
-        return 1;
-    }
-
-    @Override
-    public Integer visit(EqualsFilter filter) {
-        return 1;
-    }
-
-    @Override
-    public Integer visit(AnyFilter filter) {
-        return 1;
+    public FilterCounter() {
+        super(1);
     }
 
     @Override
@@ -123,26 +62,6 @@ public class FilterCounter implements FilterVisitor<Integer> {
     @Override
     public Integer visit(NotFilter notFilter) {
         return notFilter.getFilter().accept(this);
-    }
-
-    @Override
-    public Integer visit(StringStartsWithFilter stringStartsWithFilter) {
-        return 1;
-    }
-
-    @Override
-    public Integer visit(StringEndsWithFilter stringEndsWithFilter) {
-        return 1;
-    }
-
-    @Override
-    public Integer visit(StringRegexMatchFilter stringRegexMatchFilter) {
-        return 1;
-    }
-
-    @Override
-    public Integer visit(GenericFilter genericFilter) {
-        return 1;
     }
 
 }
