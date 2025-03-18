@@ -24,6 +24,9 @@ import lombok.EqualsAndHashCode;
 import lombok.Getter;
 import lombok.ToString;
 
+/**
+ *
+ */
 @EqualsAndHashCode(callSuper = true)
 @ToString(callSuper = true)
 public class NotFilter extends Filter {

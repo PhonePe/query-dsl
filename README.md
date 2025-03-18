@@ -84,7 +84,7 @@ Add the dependency to your project:
 | ExistsFilter    | Checks if a field exists                   | `{"operator": "EXISTS", "field": "email"}`                                        |
 | MissingFilter   | Checks if a field is missing               | `{"operator": "MISSING", "field": "phoneNumber"}`                                 |
 | ContainsFilter  | Checks if a field contains a value         | `{"operator": "CONTAINS", "field": "tags", "value": "premium", "iterable": true}` |
-| AnyFilter       | Matches any value for a field              | `{"operator": "ANY", "field": "status"}`                                          |
+| AnyFilter       | Matches any value for a field              | `{"operator": "ANY"`                                                              |
 | GenericFilter   | Custom filter with arbitrary structure     | `{"operator": "GENERIC", "field": "customField", "value": {"key": "value"}}`      |
 
 ### Logical Filters

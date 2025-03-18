@@ -39,6 +39,9 @@ import com.phonepe.commons.query.dsl.string.StringStartsWithFilter;
 
 import java.util.stream.Stream;
 
+/**
+ * A visitor to identify the fields in a given filter.
+ */
 public class FilterFieldIdentifier implements FilterVisitor<Stream<String>> {
     @Override
     public Stream<String> visit(ContainsFilter filter) {

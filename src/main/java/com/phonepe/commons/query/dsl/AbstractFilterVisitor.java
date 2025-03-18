@@ -38,6 +38,10 @@ import com.phonepe.commons.query.dsl.string.StringRegexMatchFilter;
 import com.phonepe.commons.query.dsl.string.StringStartsWithFilter;
 import lombok.AllArgsConstructor;
 
+/**
+ * A visitor to visit all the filters
+ * @param <T>
+ */
 @AllArgsConstructor
 public class AbstractFilterVisitor<T> implements FilterVisitor<T> {
     private T data;

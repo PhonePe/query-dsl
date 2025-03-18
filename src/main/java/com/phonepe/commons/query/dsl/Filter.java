@@ -41,6 +41,9 @@ import com.phonepe.commons.query.dsl.string.StringStartsWithFilter;
 import lombok.Data;
 import lombok.SneakyThrows;
 
+/**
+ * Base class for all filters
+ */
 @JsonTypeInfo(use = JsonTypeInfo.Id.NAME, include = JsonTypeInfo.As.EXISTING_PROPERTY, property = "operator")
 @JsonSubTypes({
         @JsonSubTypes.Type(value = GreaterEqualFilter.class, name = FilterOperator.GREATER_EQUAL),

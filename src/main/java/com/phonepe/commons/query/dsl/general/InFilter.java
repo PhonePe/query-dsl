@@ -26,6 +26,9 @@ import lombok.ToString;
 
 import java.util.List;
 
+/**
+ *
+ */
 @Data
 @EqualsAndHashCode(callSuper = true)
 @ToString(callSuper = true)

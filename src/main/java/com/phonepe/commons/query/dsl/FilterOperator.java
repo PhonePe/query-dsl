@@ -16,6 +16,9 @@
 
 package com.phonepe.commons.query.dsl;
 
+/**
+ * Constants for filter operators.
+ */
 public class FilterOperator {
 
     /* numeric */

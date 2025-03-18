@@ -16,27 +16,13 @@
 
 package com.phonepe.commons.query.dsl;
 
-import com.phonepe.commons.query.dsl.general.AnyFilter;
-import com.phonepe.commons.query.dsl.general.ContainsFilter;
-import com.phonepe.commons.query.dsl.general.EqualsFilter;
-import com.phonepe.commons.query.dsl.general.ExistsFilter;
-import com.phonepe.commons.query.dsl.general.GenericFilter;
-import com.phonepe.commons.query.dsl.general.InFilter;
-import com.phonepe.commons.query.dsl.general.MissingFilter;
-import com.phonepe.commons.query.dsl.general.NotEqualsFilter;
-import com.phonepe.commons.query.dsl.general.NotInFilter;
 import com.phonepe.commons.query.dsl.logical.AndFilter;
 import com.phonepe.commons.query.dsl.logical.NotFilter;
 import com.phonepe.commons.query.dsl.logical.OrFilter;
-import com.phonepe.commons.query.dsl.numeric.BetweenFilter;
-import com.phonepe.commons.query.dsl.numeric.GreaterEqualFilter;
-import com.phonepe.commons.query.dsl.numeric.GreaterThanFilter;
-import com.phonepe.commons.query.dsl.numeric.LessEqualFilter;
-import com.phonepe.commons.query.dsl.numeric.LessThanFilter;
-import com.phonepe.commons.query.dsl.string.StringEndsWithFilter;
-import com.phonepe.commons.query.dsl.string.StringRegexMatchFilter;
-import com.phonepe.commons.query.dsl.string.StringStartsWithFilter;
 
+/**
+ * A visitor to count the number of filters in a given filter.
+ */
 public class FilterCounter extends AbstractFilterVisitor<Integer> {
 
     public FilterCounter() {
