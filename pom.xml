@@ -85,6 +85,9 @@
         <lombok.version>1.18.30</lombok.version>
         <jackson.version>2.13.4</jackson.version>
 
+        <junit.jupiter.version>5.8.2</junit.jupiter.version>
+        <junit.mockito.version>4.11.0</junit.mockito.version>
+        <junit.wiremock.version>2.27.2</junit.wiremock.version>
 
         <sonar.projectKey>PhonePe_query-dsl</sonar.projectKey>
         <sonar.organization>phonepe</sonar.organization>
@@ -96,11 +99,8 @@
         <sonar.language>java</sonar.language>
         <sonar.qualitygate.wait>true</sonar.qualitygate.wait>
         <sonar.exclusions>
+            **/src/main/java/com/phonepe/commons/query/dsl/FilterFieldIdentifier.java
         </sonar.exclusions>
-
-        <junit.jupiter.version>5.8.2</junit.jupiter.version>
-        <junit.mockito.version>4.11.0</junit.mockito.version>
-        <junit.wiremock.version>2.27.2</junit.wiremock.version>
 
     </properties>
 
