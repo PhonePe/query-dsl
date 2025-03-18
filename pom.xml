@@ -6,7 +6,7 @@
 
     <groupId>com.phonepe.commons</groupId>
     <artifactId>query-dsl</artifactId>
-    <version>1.4</version>
+    <version>1.5</version>
 
     <url>https://github.com/PhonePe/query-dsl</url>
     <description>Query DSL</description>
@@ -83,7 +83,7 @@
 
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <lombok.version>1.18.30</lombok.version>
-        <jackson.version>2.13.4</jackson.version>
+        <jackson.version>2.17.2</jackson.version>
 
         <junit.jupiter.version>5.8.2</junit.jupiter.version>
         <junit.mockito.version>4.11.0</junit.mockito.version>
@@ -227,7 +227,6 @@
                     </dependency>
                 </dependencies>
                 <configuration>
-                    <forkCount>0</forkCount>
                     <reportFormat>plain</reportFormat>
                     <consoleOutputReporter>
                         <disable>true</disable>
@@ -245,26 +244,10 @@
                     </statelessTestsetInfoReporter>
                 </configuration>
             </plugin>
-
-            <plugin>
-                <groupId>org.sonarsource.scanner.maven</groupId>
-                <artifactId>sonar-maven-plugin</artifactId>
-                <version>${maven.sonar.plugin.version}</version>
-                <executions>
-                    <execution>
-                        <id>sonar-run</id>
-                        <phase>verify</phase>
-                        <goals>
-                            <goal>sonar</goal>
-                        </goals>
-                    </execution>
-                </executions>
-            </plugin>
-
             <plugin>
                 <groupId>org.jacoco</groupId>
                 <artifactId>jacoco-maven-plugin</artifactId>
-                <version>${maven.plugin.jacoco.version}</version>
+                <version>0.8.7</version>
                 <executions>
                     <execution>
                         <goals>
@@ -279,6 +262,15 @@
                         </goals>
                     </execution>
                 </executions>
+                <configuration>
+                    <excludes>
+                        <exclude>**/model/**</exclude>
+                        <exclude>**/models/**</exclude>
+                        <exclude>**/*Log*Stream.class</exclude>
+                        <exclude>com/phonepe/drove/controller/*.class</exclude>
+                        <exclude>com/phonepe/drove/controller/ui/*.class</exclude>
+                    </excludes>
+                </configuration>
             </plugin>
 
             <plugin>
@@ -302,11 +294,6 @@
                     <source>17</source>
                     <target>17</target>
                 </configuration>
-            </plugin>
-
-            <plugin>
-                <groupId>org.codehaus.mojo</groupId>
-                <artifactId>javancss-maven-plugin</artifactId>
             </plugin>
 
             <plugin>
