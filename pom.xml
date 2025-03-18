@@ -70,13 +70,12 @@
         <maven.compiler.target>17</maven.compiler.target>
         <maven.compiler.release>17</maven.compiler.release>
         <maven.deploy.skip>false</maven.deploy.skip>
-        <maven.javadoc.skip>true</maven.javadoc.skip>
 
         <maven.plugin.surefire.version>3.3.1</maven.plugin.surefire.version>
         <maven.plugin.enforcer.version>3.0.0-M2</maven.plugin.enforcer.version>
         <maven.plugin.jacoco.version>0.8.7</maven.plugin.jacoco.version>
         <maven.plugin.compiler.version>3.8.1</maven.plugin.compiler.version>
-        <maven.plugin.javadoc.version>3.6.3</maven.plugin.javadoc.version>
+        <maven-javadoc-plugin.version>3.8.0</maven-javadoc-plugin.version>
         <maven.plugin.gpg.version>1.6</maven.plugin.gpg.version>
         <maven.plugin.source.version>3.3.0</maven.plugin.source.version>
         <maven.sonar.plugin.version>3.9.1.2184</maven.sonar.plugin.version>
@@ -305,23 +304,23 @@
                     </execution>
                 </executions>
             </plugin>
-
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-javadoc-plugin</artifactId>
-                <version>${maven.plugin.javadoc.version}</version>
+                <version>${maven-javadoc-plugin.version}</version>
                 <executions>
                     <execution>
                         <id>attach-javadocs</id>
+                        <phase>package</phase>
                         <goals>
                             <goal>jar</goal>
                         </goals>
                     </execution>
                 </executions>
                 <configuration>
-                    <!-- Optional: Configure Javadoc options -->
+                    <source>17</source>
+                    <sourcepath>target/generated-sources/delombok/</sourcepath>
                     <doclint>none</doclint>
-                    <source>17</source> <!-- Use your JDK version -->
                 </configuration>
             </plugin>
         </plugins>
@@ -445,24 +444,4 @@
         </profile>
     </profiles>
 
-    <reporting>
-        <plugins>
-            <plugin>
-                <groupId>org.jacoco</groupId>
-                <artifactId>jacoco-maven-plugin</artifactId>
-                <reportSets>
-                    <reportSet>
-                        <reports>
-                            <!-- select non-aggregate reports -->
-                            <report>report</report>
-                        </reports>
-                    </reportSet>
-                </reportSets>
-            </plugin>
-            <plugin>
-                <artifactId>maven-javadoc-plugin</artifactId>
-                <version>2.10.3</version>
-            </plugin>
-        </plugins>
-    </reporting>
 </project>
