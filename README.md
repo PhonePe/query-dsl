@@ -5,7 +5,7 @@
     <a href="https://github.com/PhonePe/query-dsl/actions">
     	<img src="https://github.com/PhonePe/query-dsl/actions/workflows/build.yml/badge.svg"/>
     </a>
-    <a href="https://s01.oss.sonatype.org/content/repositories/releases/com/phonepe/commons/query-dsl/">
+    <a href="https://central.sonatype.com/artifact/com.phonepe.commons/query-dsl">
     	<img src="https://img.shields.io/maven-central/v/com.phonepe.commons/query-dsl"/>
     </a>
     <a href="https://github.com/PhonePe/query-dsl/blob/master/LICENSE">
