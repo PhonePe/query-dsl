@@ -21,7 +21,7 @@
     	<img src="https://sonarcloud.io/api/project_badges/measure?project=PhonePe_query-dsl&metric=alert_status"/>
     </a>
     <a href="https://sonarcloud.io/project/overview?id=PhonePe_query-dsl">
-    	<img src="https://sonarcloud.io/api/project_badges/measure?project=PhonePe_query-dsl&metric=coverage"/>
+    	<img src="https://img.shields.io/sonar/coverage/PhonePe_query-dsl?server=https%3A%2F%2Fsonarcloud.io"/>
     </a>
     <a href="https://sonarcloud.io/project/overview?id=PhonePe_query-dsl">
     	<img src="https://sonarcloud.io/api/project_badges/measure?project=PhonePe_query-dsl&metric=bugs"/>
