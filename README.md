@@ -72,7 +72,7 @@ Add the dependency to your project:
 <dependency>
     <groupId>com.phonepe.commons</groupId>
     <artifactId>query-dsl</artifactId>
-    <version>1.4</version>
+    <version>${query-dsl.version}</version>
 </dependency>
 ```
 
