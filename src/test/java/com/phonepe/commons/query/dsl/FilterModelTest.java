@@ -40,9 +40,9 @@ import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Nested;
 import org.junit.jupiter.api.Test;
 
-import java.util.Arrays;
 import java.util.HashMap;
 import java.util.Map;
+import java.util.Set;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertNotNull;
@@ -200,7 +200,7 @@ public class FilterModelTest {
         void testInFilter() {
             InFilter filter = InFilter.builder()
                     .field("category")
-                    .values(Arrays.asList("electronics", "gadgets", "accessories"))
+                    .values(Set.of("electronics", "gadgets", "accessories"))
                     .build();
 
             assertEquals("category", filter.getField());
@@ -220,7 +220,7 @@ public class FilterModelTest {
         void testNotInFilter() {
             NotInFilter filter = NotInFilter.builder()
                     .field("status")
-                    .values(Arrays.asList("deleted", "archived", "inactive"))
+                    .values(Set.of("deleted", "archived", "inactive"))
                     .build();
 
             assertEquals("status", filter.getField());

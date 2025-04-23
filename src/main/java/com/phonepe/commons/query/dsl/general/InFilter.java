@@ -25,6 +25,7 @@ import lombok.EqualsAndHashCode;
 import lombok.ToString;
 
 import java.util.List;
+import java.util.Set;
 
 /**
  *
@@ -34,14 +35,14 @@ import java.util.List;
 @ToString(callSuper = true)
 public class InFilter extends Filter {
 
-    private List<Object> values;
+    private Set<Object> values;
 
     public InFilter() {
         super(FilterOperator.IN);
     }
 
     @Builder
-    public InFilter(String field, List<Object> values) {
+    public InFilter(String field, Set<Object> values) {
         super(FilterOperator.IN, field);
         this.values = values;
     }

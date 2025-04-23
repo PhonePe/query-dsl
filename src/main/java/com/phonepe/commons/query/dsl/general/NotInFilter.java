@@ -19,11 +19,12 @@ package com.phonepe.commons.query.dsl.general;
 import com.phonepe.commons.query.dsl.Filter;
 import com.phonepe.commons.query.dsl.FilterOperator;
 import com.phonepe.commons.query.dsl.FilterVisitor;
-import java.util.List;
 import lombok.Builder;
 import lombok.Data;
 import lombok.EqualsAndHashCode;
 import lombok.ToString;
+
+import java.util.Set;
 
 /**
  *
@@ -33,14 +34,14 @@ import lombok.ToString;
 @ToString(callSuper = true)
 public class NotInFilter extends Filter {
 
-    private List<Object> values;
+    private Set<Object> values;
 
     public NotInFilter() {
         super(FilterOperator.NOT_IN);
     }
 
     @Builder
-    public NotInFilter(String field, List<Object> values) {
+    public NotInFilter(String field, Set<Object> values) {
         super(FilterOperator.NOT_IN, field);
         this.values = values;
     }
