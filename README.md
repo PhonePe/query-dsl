@@ -91,6 +91,7 @@ Add the dependency to your project:
 | ContainsFilter  | Checks if a field contains a value         | `{"operator": "CONTAINS", "field": "tags", "value": "premium", "iterable": true}` |
 | AnyFilter       | Matches any value for a field              | `{"operator": "ANY"`                                                              |
 | GenericFilter   | Custom filter with arbitrary structure     | `{"operator": "GENERIC", "field": "customField", "value": {"key": "value"}}`      |
+| HopeFilter      | Evaluates predicate expression using Hope  | `{"operator": "HOPE", "field": "customField", "value": "customField > 100"}`      |
 
 ### Logical Filters
 

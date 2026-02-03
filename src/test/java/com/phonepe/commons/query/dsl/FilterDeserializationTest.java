@@ -22,6 +22,7 @@ import com.phonepe.commons.query.dsl.general.ContainsFilter;
 import com.phonepe.commons.query.dsl.general.EqualsFilter;
 import com.phonepe.commons.query.dsl.general.ExistsFilter;
 import com.phonepe.commons.query.dsl.general.GenericFilter;
+import com.phonepe.commons.query.dsl.general.HopeFilter;
 import com.phonepe.commons.query.dsl.general.InFilter;
 import com.phonepe.commons.query.dsl.general.MissingFilter;
 import com.phonepe.commons.query.dsl.general.NotEqualsFilter;
@@ -149,6 +150,9 @@ public class FilterDeserializationTest {
             case "generic_filter.json":
                 assertInstanceOf(GenericFilter.class, filter, "Should be a GenericFilter");
                 break;
+            case "hope_filter.json":
+                assertInstanceOf(HopeFilter.class, filter, "Should be a HopeFilter");
+                break;
             default:
                 fail("Unknown filter type for file: " + fileName);
         }
@@ -222,6 +226,9 @@ public class FilterDeserializationTest {
         } else if (filter instanceof GenericFilter genericFilter) {
             assertEquals("customField", genericFilter.getField());
             assertNotNull(genericFilter.getValue());
+        } else if (filter instanceof HopeFilter hopeFilter) {
+            assertEquals("age", hopeFilter.getField());
+            assertNotNull(hopeFilter.getValue());
         }
     }
 

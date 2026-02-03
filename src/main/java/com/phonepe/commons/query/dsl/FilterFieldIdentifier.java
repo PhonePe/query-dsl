@@ -21,6 +21,7 @@ import com.phonepe.commons.query.dsl.general.ContainsFilter;
 import com.phonepe.commons.query.dsl.general.EqualsFilter;
 import com.phonepe.commons.query.dsl.general.ExistsFilter;
 import com.phonepe.commons.query.dsl.general.GenericFilter;
+import com.phonepe.commons.query.dsl.general.HopeFilter;
 import com.phonepe.commons.query.dsl.general.InFilter;
 import com.phonepe.commons.query.dsl.general.MissingFilter;
 import com.phonepe.commons.query.dsl.general.NotEqualsFilter;
@@ -151,4 +152,8 @@ public class FilterFieldIdentifier implements FilterVisitor<Stream<String>> {
         return Stream.of(genericFilter.getField());
     }
 
+    @Override
+    public Stream<String> visit(HopeFilter hopeFilter) {
+        return Stream.of(hopeFilter.getField());
+    }
 }

@@ -38,6 +38,7 @@ public class FilterOperator {
     public static final String MISSING = "MISSING";
     public static final String CONTAINS = "CONTAINS";
     public static final String GENERIC = "GENERIC";
+    public static final String HOPE = "HOPE";
 
     /* string */
     public static final String STR_ENDS_WITH = "STRING_ENDS_WITH";

@@ -23,6 +23,7 @@ import com.phonepe.commons.query.dsl.general.ContainsFilter;
 import com.phonepe.commons.query.dsl.general.EqualsFilter;
 import com.phonepe.commons.query.dsl.general.ExistsFilter;
 import com.phonepe.commons.query.dsl.general.GenericFilter;
+import com.phonepe.commons.query.dsl.general.HopeFilter;
 import com.phonepe.commons.query.dsl.general.InFilter;
 import com.phonepe.commons.query.dsl.general.MissingFilter;
 import com.phonepe.commons.query.dsl.general.NotEqualsFilter;
@@ -65,8 +66,8 @@ import lombok.SneakyThrows;
         @JsonSubTypes.Type(value = StringEndsWithFilter.class, name = FilterOperator.STR_ENDS_WITH),
         @JsonSubTypes.Type(value = StringStartsWithFilter.class, name = FilterOperator.STR_STARTS_WITH),
         @JsonSubTypes.Type(value = StringRegexMatchFilter.class, name = FilterOperator.STR_REGEX_MATCH),
-        @JsonSubTypes.Type(value = GenericFilter.class, name = FilterOperator.GENERIC)
-
+        @JsonSubTypes.Type(value = GenericFilter.class, name = FilterOperator.GENERIC),
+        @JsonSubTypes.Type(value = HopeFilter.class, name = FilterOperator.HOPE)
 })
 @Data
 public abstract class Filter {

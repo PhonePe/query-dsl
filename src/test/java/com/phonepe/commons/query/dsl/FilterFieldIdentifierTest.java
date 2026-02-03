@@ -5,6 +5,7 @@ import com.phonepe.commons.query.dsl.general.ContainsFilter;
 import com.phonepe.commons.query.dsl.general.EqualsFilter;
 import com.phonepe.commons.query.dsl.general.ExistsFilter;
 import com.phonepe.commons.query.dsl.general.GenericFilter;
+import com.phonepe.commons.query.dsl.general.HopeFilter;
 import com.phonepe.commons.query.dsl.general.InFilter;
 import com.phonepe.commons.query.dsl.general.MissingFilter;
 import com.phonepe.commons.query.dsl.general.NotEqualsFilter;
@@ -53,6 +54,7 @@ class FilterFieldIdentifierTest {
         assertEquals(List.of("field15"), getFields(StringEndsWithFilter.builder().field("field15").build()));
         assertEquals(List.of("field16"), getFields(StringRegexMatchFilter.builder().field("field16").build()));
         assertEquals(List.of("field17"), getFields(GenericFilter.builder().field("field17").build()));
+        assertEquals(List.of("field18"), getFields(HopeFilter.builder().field("field18").build()));
     }
 
     @Test
