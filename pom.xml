@@ -9,7 +9,8 @@
     <version>2.0.5</version>
 
     <url>https://github.com/PhonePe/query-dsl</url>
-    <description>Query DSL</description>
+    <name>Query DSL</name>
+    <description>A DSL spec for depicting querying ability, filtering data of some form</description>
     <inceptionYear>2025</inceptionYear>
 
     <scm>
