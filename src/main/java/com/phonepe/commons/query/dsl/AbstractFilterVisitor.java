@@ -21,6 +21,7 @@ import com.phonepe.commons.query.dsl.general.ContainsFilter;
 import com.phonepe.commons.query.dsl.general.EqualsFilter;
 import com.phonepe.commons.query.dsl.general.ExistsFilter;
 import com.phonepe.commons.query.dsl.general.GenericFilter;
+import com.phonepe.commons.query.dsl.general.HopeFilter;
 import com.phonepe.commons.query.dsl.general.InFilter;
 import com.phonepe.commons.query.dsl.general.MissingFilter;
 import com.phonepe.commons.query.dsl.general.NotEqualsFilter;
@@ -143,6 +144,11 @@ public class AbstractFilterVisitor<T> implements FilterVisitor<T> {
 
     @Override
     public T visit(GenericFilter genericFilter) {
+        return data;
+    }
+
+    @Override
+    public T visit(HopeFilter hopeFilter) {
         return data;
     }
 }

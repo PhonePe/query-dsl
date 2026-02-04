@@ -21,6 +21,7 @@ import com.phonepe.commons.query.dsl.general.ContainsFilter;
 import com.phonepe.commons.query.dsl.general.EqualsFilter;
 import com.phonepe.commons.query.dsl.general.ExistsFilter;
 import com.phonepe.commons.query.dsl.general.GenericFilter;
+import com.phonepe.commons.query.dsl.general.HopeFilter;
 import com.phonepe.commons.query.dsl.general.InFilter;
 import com.phonepe.commons.query.dsl.general.MissingFilter;
 import com.phonepe.commons.query.dsl.general.NotEqualsFilter;
@@ -76,6 +77,7 @@ public class FilterCounterTest {
         assertEquals(1, StringStartsWithFilter.builder().build().accept(new FilterCounter()));
         assertEquals(1, StringRegexMatchFilter.builder().build().accept(new FilterCounter()));
         assertEquals(1, GenericFilter.builder().build().accept(new FilterCounter()));
+        assertEquals(1, HopeFilter.builder().build().accept(new FilterCounter()));
     }
 
     @Test
